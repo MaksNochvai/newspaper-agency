@@ -4,7 +4,7 @@
 {% block content %}
   <h1 class="list-group-item bg-primary rounded d-flex align-items-center">
   <span class="flex-grow-1 text-light">Manufacturer List</span>
-  <a href="{% url 'taxi:manufacturer-create' %}" class="btn btn-dark-blue link-to-page ml-auto" style="width: 20%;">Create</a>
+  <a href="{% url 'agency:topic-list' %}" class="btn btn-dark-blue link-to-page ml-auto" style="width: 20%;">Create</a>
   </h1>
     {% include "includes/search_line.html" %}
 
@@ -33,13 +33,13 @@
           </td>
           <td>
               <a style="color: green"
-                 href="{% url 'taxi:manufacturer-update' pk=manufacturer.id %}">
+                 href="{% url 'agency:topic-update' pk=manufacturer.id %}">
                  Update
               </a>
             </td>
             <td>
               <a style="color: red"
-                href="{% url 'taxi:manufacturer-delete' pk=manufacturer.id %}">
+                href="{% url 'agency:topic-delete' pk=manufacturer.id %}">
                 Delete
               </a>
             </td>
@@ -48,6 +48,6 @@
     </table>
 
   {% else %}
-      <p>There are no manufacturers in the service.</p>
+      <p>There are no topics in the service.</p>
   {% endif %}
 {% endblock %}
