@@ -2,10 +2,11 @@
 
 {% block content %}
   <h1>Delete redactor?</h1>
+  {{ redactor.username }}
   <form action="" method="post">
     {% csrf_token %}
-
+    <br>
     <input type="submit" value="Delete" class="btn btn-danger">
-    <a class="btn btn-primary" href="{% url 'agency:redactor-detail' pk=car.id %}">Cancel</a>
+    <a class="btn btn-primary" href="{% url 'agency:redactor-detail' pk=redactor.id %}">Cancel</a>
   </form>
 {% endblock %}

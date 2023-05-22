@@ -11,7 +11,11 @@ from agency.views import (
     NewspaperCreateView,
     NewspaperUpdateView,
     NewspaperDeleteView,
-    toggle_assign_to_newspaper, RedactorListView, RedactorDetailView, RedactorCreateView, RedactorDeleteView,
+    toggle_assign_to_newspaper,
+    RedactorListView,
+    RedactorDetailView,
+    RedactorCreateView,
+    RedactorDeleteView,
 )
 
 

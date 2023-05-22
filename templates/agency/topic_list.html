@@ -3,43 +3,39 @@
 
 {% block content %}
   <h1 class="list-group-item bg-primary rounded d-flex align-items-center">
-  <span class="flex-grow-1 text-light">Manufacturer List</span>
-  <a href="{% url 'agency:topic-list' %}" class="btn btn-dark-blue link-to-page ml-auto" style="width: 20%;">Create</a>
+  <span class="flex-grow-1 text-light">Topic List</span>
+  <a href="{% url 'agency:topic-create' %}" class="btn btn-dark-blue link-to-page ml-auto" style="width: 20%;">Create</a>
   </h1>
     {% include "includes/search_line.html" %}
 
-  {% if manufacturer_list %}
+  {% if topic_list %}
     <table class="table table-striped table-bordered">
     <thead class="table-primary">
       <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>Country</th>
         <th>Update</th>
         <th>Delete</th>
       </tr>
     </thead>
 
-      {% for manufacturer in manufacturer_list %}
+      {% for topic in topic_list %}
         <tr>
           <td>
-              {{ manufacturer.id }}
+              {{ topic.id }}
           </td>
           <td>
-              {{ manufacturer.name }}
-          </td>
-          <td>
-              {{ manufacturer.country }}
+              {{ topic.name }}
           </td>
           <td>
               <a style="color: green"
-                 href="{% url 'agency:topic-update' pk=manufacturer.id %}">
+                 href="{% url 'agency:topic-update' pk=topic.id %}">
                  Update
               </a>
             </td>
             <td>
               <a style="color: red"
-                href="{% url 'agency:topic-delete' pk=manufacturer.id %}">
+                href="{% url 'agency:topic-delete' pk=topic.id %}">
                 Delete
               </a>
             </td>

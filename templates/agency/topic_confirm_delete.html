@@ -2,10 +2,11 @@
 
 {% block content %}
   <h1>Delete topic?</h1>
+  {{ topic.name }}
   <form action="" method="post">
     {% csrf_token %}
-
+    <br>
     <input type="submit" value="Delete" class="btn btn-danger">
-    <a class="btn btn-primary" href="{% url 'agency:topic-list' pk=car.id %}">Cancel</a>
+    <a class="btn btn-primary" href="{% url 'agency:topic-list' %}">Cancel</a>
   </form>
 {% endblock %}

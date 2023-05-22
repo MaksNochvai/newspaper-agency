@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
+from django.views.generic import DetailView, DeleteView
 
 from .models import Redactor, Newspaper, Topic
 from .forms import (
@@ -144,9 +145,8 @@ class RedactorListView(LoginRequiredMixin, generic.ListView):
         return queryset
 
 
-class RedactorDetailView(LoginRequiredMixin, generic.DetailView):
+class RedactorDetailView(LoginRequiredMixin, DetailView):
     model = Redactor
-    queryset = Redactor.objects.all().prefetch_related("newspaper__topic")
 
 
 class RedactorCreateView(LoginRequiredMixin, generic.CreateView):
@@ -154,9 +154,9 @@ class RedactorCreateView(LoginRequiredMixin, generic.CreateView):
     form_class = RedactorCreationForm
 
 
-class RedactorDeleteView(LoginRequiredMixin, generic.DeleteView):
+class RedactorDeleteView(LoginRequiredMixin, DeleteView):
     model = Redactor
-    success_url = reverse_lazy("")
+    success_url = reverse_lazy('agency:redactor-list')
 
 
 @login_required

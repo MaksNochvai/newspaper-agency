@@ -33,7 +33,7 @@ class Newspaper(models.Model):
     context = models.TextField(
         max_length=255, blank=True
     )
-    published_date = models.DateTimeField()
+    published_date = models.DateTimeField(auto_now_add=True)
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
     redactor = models.ManyToManyField(Redactor, related_name="topics")
 
