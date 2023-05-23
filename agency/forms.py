@@ -41,7 +41,7 @@ class RedactorYearsOfExperienceUpdateForm(forms.ModelForm):
         fields = ["years_of_experience"]
 
     def clean_years_of_experience(self):
-        return self.cleaned_data["years_of_experience "]
+        return self.cleaned_data["years_of_experience"]
 
 
 class NewspaperSearchForm(forms.Form):
