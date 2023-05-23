@@ -10,7 +10,10 @@ from .models import Redactor, Newspaper, Topic
 from .forms import (
     TopicSearchForm,
     NewspaperSearchForm,
-    NewspaperForm, RedactorSearchForm, RedactorCreationForm,
+    NewspaperForm,
+    RedactorSearchForm,
+    RedactorCreationForm,
+    RedactorYearsOfExperienceUpdateForm,
 )
 
 
@@ -112,12 +115,12 @@ class NewspaperCreateView(LoginRequiredMixin, generic.CreateView):
 class NewspaperUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Newspaper
     form_class = NewspaperForm
-    success_url = reverse_lazy("agency:newspaper-update")
+    success_url = reverse_lazy("agency:newspaper-list")
 
 
 class NewspaperDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Newspaper
-    success_url = reverse_lazy("agency:newspaper-delete")
+    success_url = reverse_lazy("agency:newspaper-list")
 
 
 class RedactorListView(LoginRequiredMixin, generic.ListView):
@@ -161,13 +164,19 @@ class RedactorDeleteView(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('agency:redactor-list')
 
 
+class RedactorLicenseUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Redactor
+    form_class = RedactorYearsOfExperienceUpdateForm
+    success_url = reverse_lazy("taxi:driver-list")
+
+
 @login_required
 def toggle_assign_to_newspaper(request, pk):
     redactor = Redactor.objects.get(id=request.user.id)
     if (
             Newspaper.objects.get(id=pk) in redactor.newspapers.all()
     ):  # probably could check if car exists
-        redactor.cars.remove(pk)
+        redactor.newspapers.remove(pk)
     else:
-        redactor.cars.add(pk)
+        redactor.newspapers.add(pk)
     return HttpResponseRedirect(reverse_lazy("agency:newspaper-detail", args=[pk]))

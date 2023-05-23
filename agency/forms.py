@@ -35,6 +35,15 @@ class RedactorSearchForm(forms.Form):
     )
 
 
+class RedactorYearsOfExperienceUpdateForm(forms.ModelForm):
+    class Meta:
+        model = Redactor
+        fields = ["years_of_experience"]
+
+    def clean_years_of_experience(self):
+        return self.cleaned_data["years_of_experience "]
+
+
 class NewspaperSearchForm(forms.Form):
     title = forms.CharField(
         max_length=255,
