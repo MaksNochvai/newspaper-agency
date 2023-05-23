@@ -164,7 +164,7 @@ class RedactorDeleteView(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('agency:redactor-list')
 
 
-class RedactorLicenseUpdateView(LoginRequiredMixin, generic.UpdateView):
+class RedactorExperienceUpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Redactor
     form_class = RedactorYearsOfExperienceUpdateForm
     success_url = reverse_lazy("taxi:driver-list")

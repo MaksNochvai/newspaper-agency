@@ -16,6 +16,7 @@ from agency.views import (
     RedactorDetailView,
     RedactorCreateView,
     RedactorDeleteView,
+    RedactorExperienceUpdateView,
 )
 
 
@@ -79,6 +80,11 @@ urlpatterns = [
         "redactors/create/",
         RedactorCreateView.as_view(),
         name="redactor-create"
+    ),
+    path(
+        "redactors/<int:pk>/update/",
+        RedactorExperienceUpdateView.as_view(),
+        name="redactor-update",
     ),
     path(
         "redactors/<int:pk>/delete/",
