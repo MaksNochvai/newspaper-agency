@@ -3,10 +3,9 @@
 
 {% block content %}
   <h1 class="list-group-item bg-primary rounded d-flex align-items-center">
-    <span class="flex-grow-1 text-light">Newspaper List</span>
+    <span class="flex-grow-1 text-light">Newspaper List {% include "includes/search_line.html" %}</span>
     <a href="{% url 'agency:newspaper-create' %}" class="btn btn-dark-blue link-to-page ml-auto" style="width: 20%;">Create</a>
   </h1>
-  {% include "includes/search_line.html" %}
   {% if newspaper_list %}
     <table class="table table-striped table-bordered">
       <thead class="table-primary">
