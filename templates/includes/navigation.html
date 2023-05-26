@@ -1,3 +1,10 @@
+<style>
+  .sidebar-nav {
+    margin-top: 1em; /* Додайте потрібний відступ у пікселях */
+  }
+</style>
+
+
 <ul class="sidebar-nav list-group">
   {% if request.user.is_authenticated %}
     <li class="list-group-item bg-primary text-light">User: <a href="{{ user.get_absolute_url }}" class="text-light">{{ user.get_username }}</a></li>

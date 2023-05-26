@@ -1,9 +1,27 @@
 {% load crispy_forms_filters %}
+
+<style>
+
+  .search-button {
+    margin-left: 5px;
+    height: 100%;
+  }
+
+  .search-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+</style>
+
 <form action="" method="get" class="form-inline">
-  <div class="input-group text-primary">
-    {{ search_form|crispy }}
-    <div class="input-group-append">
-      <button type="submit" class="btn btn-primary bg-white">
+  <div class="input-group">
+    <div class="search-wrapper">
+      <div class="input-group search-line">
+        {{ search_form|crispy }}
+      </div>
+      <button type="submit" class="btn btn-primary bg-white search-button">
         <i class="fas fa-search text-primary"></i>
       </button>
     </div>
