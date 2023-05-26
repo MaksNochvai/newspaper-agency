@@ -22,7 +22,7 @@ body {
     border-radius: 5px;
     padding: 2px;
     width: 300px;
-    flex-shrink: 0; /* Додано нову властивість */
+    flex-shrink: 0;
   }
 
 .search-line input[type="text"] {
