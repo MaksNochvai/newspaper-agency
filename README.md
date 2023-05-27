@@ -19,10 +19,15 @@ This project is a web application designed for managing the process of publishin
 ## DB-structure: 
 ![image](https://github.com/MaksNochvai/newspaper-agency/assets/123680608/a61e3420-482f-40ba-99db-3cb94edec589)
 
-# Test User Credentials
+## Test User Credentials
 
 - Username: guest
 - Password: guest123
+
+## For donwload test data use next comand in terminal:
+- python manage.py loaddata newspaper_agency_db_data.json 
+
+# Project wiew: 
 
 ## Login page:
 ![image](https://github.com/MaksNochvai/newspaper-agency/assets/123680608/dccc9713-d050-47d6-8ac5-cbf57d223d18)
