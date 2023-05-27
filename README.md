@@ -19,13 +19,13 @@ Technologies Used:
 DB-structure: 
 ![image](https://github.com/MaksNochvai/newspaper-agency/assets/123680608/a61e3420-482f-40ba-99db-3cb94edec589)
 
-Login page:
-![image](https://github.com/MaksNochvai/newspaper-agency/assets/123680608/dccc9713-d050-47d6-8ac5-cbf57d223d18)
-
-## Test User Credentials
+# Test User Credentials
 
 - Username: guest
 - Password: guest123
+- 
+Login page:
+![image](https://github.com/MaksNochvai/newspaper-agency/assets/123680608/dccc9713-d050-47d6-8ac5-cbf57d223d18)
 
 Home page:
 ![image](https://github.com/MaksNochvai/newspaper-agency/assets/123680608/0c078405-efc5-4e1b-ac20-c5942cce284a)
