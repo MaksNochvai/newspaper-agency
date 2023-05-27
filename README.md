@@ -1,16 +1,16 @@
 # newspaper-agency
-Newspaper Agency
+## Newspaper Agency
 
 This project is a web application designed for managing the process of publishing and managing news articles in a newspaper agency. The application provides a user-friendly interface for adding, editing, and deleting articles, as well as managing journalists and editors.
 
-Key Features:
+## Key Features:
 - Add new articles with titles, content, authors, and categories.
 - Edit and update existing articles.
 - Delete articles that are no longer relevant.
 - Manage users, including journalists and editors.
 - Search and filter articles by categories, dates, and other parameters.
 
-Technologies Used:
+## Technologies Used:
 - Python: Programming language for the application's backend logic.
 - Django: Web framework for rapid and convenient web development.
 - HTML/CSS: Markup and styling languages for creating the web interface.
@@ -76,7 +76,7 @@ Technologies Used:
 ## Logout page:
 ![image](https://github.com/MaksNochvai/newspaper-agency/assets/123680608/8cef3d54-fa50-4440-bcb7-d57d7e002fe3)
 
-To set up the project locally, follow these steps:
+## To set up the project locally, follow these steps:
 
 1. Clone the project repository to your computer.
 2. Navigate to the project directory.
