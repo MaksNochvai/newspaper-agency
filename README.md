@@ -24,6 +24,9 @@ This project is a web application designed for managing the process of publishin
 - Username: guest
 - Password: guest123
 
+# For donwload test data use next comand in terminal:
+- python manage.py loaddata newspaper_agency_db_data.json 
+
 ## Login page:
 ![image](https://github.com/MaksNochvai/newspaper-agency/assets/123680608/dccc9713-d050-47d6-8ac5-cbf57d223d18)
 
