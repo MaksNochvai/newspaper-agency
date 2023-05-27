@@ -1,4 +1,21 @@
 # newspaper-agency
+Newspaper Agency
+
+This project is a web application designed for managing the process of publishing and managing news articles in a newspaper agency. The application provides a user-friendly interface for adding, editing, and deleting articles, as well as managing journalists and editors.
+
+Key Features:
+- Add new articles with titles, content, authors, and categories.
+- Edit and update existing articles.
+- Delete articles that are no longer relevant.
+- Manage users, including journalists and editors.
+- Search and filter articles by categories, dates, and other parameters.
+
+Technologies Used:
+- Python: Programming language for the application's backend logic.
+- Django: Web framework for rapid and convenient web development.
+- HTML/CSS: Markup and styling languages for creating the web interface.
+- PostgreSQL: Database for storing article and user information.
+
 DB-structure: 
 ![image](https://github.com/MaksNochvai/newspaper-agency/assets/123680608/a61e3420-482f-40ba-99db-3cb94edec589)
 
@@ -54,3 +71,19 @@ Delete topic page:
 Logout page:
 ![image](https://github.com/MaksNochvai/newspaper-agency/assets/123680608/8cef3d54-fa50-4440-bcb7-d57d7e002fe3)
 
+To set up the project locally, follow these steps:
+
+1. Clone the project repository to your computer.
+2. Navigate to the project directory.
+3. Create a virtual environment for the project: python3 -m venv env
+4. Activate the virtual environment:
+   - For Windows: .\env\Scripts\activate
+   - For macOS/Linux: source env/bin/activate
+5. Install the project dependencies: pip install -r requirements.txt
+6. Create a .env file in the project root directory and add your secret key and other environment variables. Refer to the .env.sample file for the required variables.
+7. Update the database settings in the settings.py file to match your local database configuration.
+8. Apply the database migrations: python manage.py migrate
+9. Load the test data fixture: python manage.py loaddata test_data.json
+10. Create a superuser account for accessing the admin interface: python manage.py createsuperuser
+11. Start the development server: python manage.py runserver
+12. Access the application in your browser at http://localhost:8000/
