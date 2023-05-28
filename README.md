@@ -25,7 +25,7 @@ This project is a web application designed for managing the process of publishin
 - Password: guest123
 
 ## For donwload test data use next comand in terminal:
-- python manage.py loaddata newspaper_agency_db_data.json 
+python manage.py loaddata fixture_data.json
 
 # Project wiew: 
 
