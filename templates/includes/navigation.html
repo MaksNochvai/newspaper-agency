@@ -1,0 +1,45 @@
+<style>
+  .sidebar-nav {
+    margin-top: 1em; /* Додайте потрібний відступ у пікселях */
+  }
+</style>
+
+
+<ul class="sidebar-nav list-group">
+  {% if request.user.is_authenticated %}
+    <li class="list-group-item bg-primary text-light">User: <a href="{{ user.get_absolute_url }}" class="text-light">{{ user.get_username }}</a></li>
+  {% endif %}
+  <li class="list-group-item sidebar-title">
+    <a href="/" class="nav-link">
+      <i class="material-icons opacity-6 me-2 text-md">home</i>
+      Home
+    </a>
+  </li>
+  <li class="list-group-item">
+    <a href="{% url 'agency:redactor-list' %}" class="nav-link">
+      <i class="material-icons opacity-6 me-2 text-md">people</i>
+      All Redactors
+    </a>
+  </li>
+  <li class="list-group-item">
+    <a href="{% url 'agency:newspaper-list' %}" class="nav-link">
+      <i class="material-icons opacity-6 me-2 text-md">article</i>
+      All Newspapers
+    </a>
+  </li>
+  <li class="list-group-item dropdown">
+    <a href="{% url 'agency:topic-list' %}" class="nav-link">
+      <i class="material-icons opacity-6 me-2 text-md">subject</i>
+      All topics
+    </a>
+  </li>
+
+  {% if request.user.is_authenticated %}
+    <li class="list-group-item">
+      <a href="{% url 'logout' %}" class="nav-link">
+        <i class="fa fa-sign-out me-1"></i>
+        <p class="d-inline text-sm z-index-1 font-weight-bold" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sign OUT">Logout</p>
+      </a>
+    </li>
+  {% endif %}
+</ul>

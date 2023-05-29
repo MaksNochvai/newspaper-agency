@@ -1,0 +1,49 @@
+{% extends "base-fullscreen.html" %}
+
+{% block content %}
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card mt-4">
+          <div class="card-header bg-primary text-white">
+            <h1 class="card-title text-white">{{ newspaper.title }}</h1>
+          </div>
+          <div class="card-body">
+            <p><strong>Topic:</strong> {{ newspaper.topic }}</p>
+            <p><strong>Context:</strong> {{ newspaper.context }}</p>
+          </div>
+          <div class="card-footer">
+            <a href="{% url 'agency:newspaper-delete' pk=newspaper.pk %}" class="btn btn-danger mr-2">
+              Delete
+            </a>
+            <a href="{% url 'agency:newspaper-update' pk=newspaper.pk %}" class="btn btn-success">
+              Update
+            </a>
+          </div>
+        </div>
+        <div class="card mt-4">
+          <div class="card-header bg-primary text-white">
+            <h4 class="card-title text-white">Redactors</h4>
+          </div>
+          <div class="card-body">
+            {% if newspaper in user.newspapers.all %}
+              <a href="{% url 'agency:toggle-newspaper-assign' pk=newspaper.id %}" class="btn btn-danger mb-3">
+                Delete me from this newspaper
+              </a>
+            {% else %}
+              <a href="{% url 'agency:toggle-newspaper-assign' pk=newspaper.id %}" class="btn btn-success mb-3">
+                Assign me to this newspaper
+              </a>
+            {% endif %}
+            <hr>
+            <ul>
+              {% for redactor in newspaper.redactors.all %}
+                <li>{{ redactor.username }} ({{ redactor.first_name }} {{ redactor.last_name }})</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
