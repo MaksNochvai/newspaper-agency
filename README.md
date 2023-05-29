@@ -89,9 +89,7 @@ python manage.py loaddata fixture_data.json
    - For macOS/Linux: source env/bin/activate
 3. Install the project dependencies: pip install -r requirements.txt
 4. Create a .env file in the project root directory and add your secret key and other environment variables. Refer to the .env.sample file for the required variables.
-5. Update the database settings in the settings.py file to match your local database configuration.
 6. Apply the database migrations: python manage.py migrate
-7. Load the test data fixture: python manage.py loaddata test_data.json
 8. Create a superuser account for accessing the admin interface: python manage.py createsuperuser
 9. Start the development server: python manage.py runserver
 10. Access the application in your browser at http://localhost:8000/
