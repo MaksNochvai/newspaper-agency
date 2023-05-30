@@ -12,6 +12,7 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('agency', '0001_initial'),
+        ('sessions', '0001_initial'),
     ]
 
     operations = [
