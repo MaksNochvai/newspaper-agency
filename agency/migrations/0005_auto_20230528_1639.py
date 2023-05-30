@@ -5,14 +5,14 @@ from django.db import migrations
 
 def load_fixture(apps, schema_editor):
     from django.core.management import call_command
-    call_command('loaddata', 'fixture_data.json')
+
+    call_command("loaddata", "fixture_data.json")
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('sessions', '0001_initial'),
-        ('agency', '0004_remove_newspaper_redactor_newspaper_redactors')
+        ("sessions", "0001_initial"),
+        ("agency", "0004_remove_newspaper_redactor_newspaper_redactors"),
     ]
 
     operations = [

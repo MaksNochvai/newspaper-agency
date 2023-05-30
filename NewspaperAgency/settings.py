@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "crispy_forms",
     "agency",
-
 ]
 
 MIDDLEWARE = [
@@ -59,8 +58,7 @@ ROOT_URLCONF = "NewspaperAgency.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / "templates"]
-        ,
+        "DIRS": [BASE_DIR / "templates"],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -68,7 +66,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                'agency.context_processors.cfg_assets_root'
+                "agency.context_processors.cfg_assets_root",
             ],
         },
     },
@@ -138,4 +136,4 @@ STATIC_ROOT = BASE_DIR / "staticfiles"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-ASSETS_ROOT = '/static/assets'
+ASSETS_ROOT = "/static/assets"

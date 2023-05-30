@@ -30,9 +30,7 @@ class Redactor(AbstractUser):
 
 class Newspaper(models.Model):
     title = models.CharField(max_length=255)
-    context = models.TextField(
-        max_length=255, blank=True
-    )
+    context = models.TextField(max_length=255, blank=True)
     published_date = models.DateTimeField(auto_now_add=True)
     topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
     redactors = models.ManyToManyField(Redactor, related_name="newspapers")
