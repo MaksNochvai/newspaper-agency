@@ -11,8 +11,8 @@ def load_fixture(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('agency', '0001_initial'),
         ('sessions', '0001_initial'),
+        ('agency', '0004_remove_newspaper_redactor_newspaper_redactors')
     ]
 
     operations = [
