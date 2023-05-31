@@ -5,19 +5,20 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('agency', '0003_alter_newspaper_published_date'),
+        ("agency", "0003_alter_newspaper_published_date"),
     ]
 
     operations = [
         migrations.RemoveField(
-            model_name='newspaper',
-            name='redactor',
+            model_name="newspaper",
+            name="redactor",
         ),
         migrations.AddField(
-            model_name='newspaper',
-            name='redactors',
-            field=models.ManyToManyField(related_name='newspapers', to=settings.AUTH_USER_MODEL),
+            model_name="newspaper",
+            name="redactors",
+            field=models.ManyToManyField(
+                related_name="newspapers", to=settings.AUTH_USER_MODEL
+            ),
         ),
     ]

@@ -47,9 +47,7 @@ class TopicListView(LoginRequiredMixin, generic.ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(TopicListView, self).get_context_data(**kwargs)
         name = self.request.GET.get("name", "")
-        context["search_form"] = TopicSearchForm(
-            initial={"name": name}
-        )
+        context["search_form"] = TopicSearchForm(initial={"name": name})
         return context
 
     def get_queryset(self):
@@ -95,9 +93,7 @@ class NewspaperListView(LoginRequiredMixin, generic.ListView):
         form = NewspaperSearchForm(self.request.GET)
 
         if form.is_valid():
-            return self.queryset.filter(
-                title__icontains=form.cleaned_data["title"]
-            )
+            return self.queryset.filter(title__icontains=form.cleaned_data["title"])
 
         return self.queryset
 
@@ -132,9 +128,7 @@ class RedactorListView(LoginRequiredMixin, generic.ListView):
 
         username = self.request.GET.get("username", "")
 
-        context["search_form"] = RedactorSearchForm(
-            initial={"username": username}
-        )
+        context["search_form"] = RedactorSearchForm(initial={"username": username})
 
         return context
 
@@ -143,9 +137,7 @@ class RedactorListView(LoginRequiredMixin, generic.ListView):
         form = RedactorSearchForm(self.request.GET)
 
         if form.is_valid():
-            return queryset.filter(
-                username__icontains=form.cleaned_data["username"]
-            )
+            return queryset.filter(username__icontains=form.cleaned_data["username"])
 
         return queryset
 
@@ -161,7 +153,7 @@ class RedactorCreateView(LoginRequiredMixin, generic.CreateView):
 
 class RedactorDeleteView(LoginRequiredMixin, DeleteView):
     model = Redactor
-    success_url = reverse_lazy('agency:redactor-list')
+    success_url = reverse_lazy("agency:redactor-list")
 
 
 class RedactorExperienceUpdateView(LoginRequiredMixin, generic.UpdateView):
@@ -174,7 +166,7 @@ class RedactorExperienceUpdateView(LoginRequiredMixin, generic.UpdateView):
 def toggle_assign_to_newspaper(request, pk):
     redactor = Redactor.objects.get(id=request.user.id)
     if (
-            Newspaper.objects.get(id=pk) in redactor.newspapers.all()
+        Newspaper.objects.get(id=pk) in redactor.newspapers.all()
     ):  # probably could check if car exists
         redactor.newspapers.remove(pk)
     else:
