@@ -27,6 +27,10 @@ This project is a web application designed for managing the process of publishin
 ## For donwload test data use next comand in terminal:
 python manage.py loaddata fixture_data.json
 
+## Check it out!
+
+[Newspaper agency project deployed to Render](https://newspapers-agency-65hd.onrender.com/accounts/login/?next=/)
+
 # Project wiew: 
 
 ## Login page:
