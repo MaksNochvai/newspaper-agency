@@ -21,7 +21,7 @@ This project is a web application designed for managing the process of publishin
 
 ## Check it out!
 
-# [Newspaper agency project deployed to Render](https://newspapers-agency-65hd.onrender.com/accounts/login/?next=/)
+# [Newspaper agency project deployed to Render](https://newspapers-agency-65hd.onrender.com/accounts/login/)
 
 ## Test User Credentials
 
