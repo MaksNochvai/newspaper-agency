@@ -19,6 +19,10 @@ This project is a web application designed for managing the process of publishin
 ## DB-structure: 
 ![image](https://github.com/MaksNochvai/newspaper-agency/assets/123680608/a61e3420-482f-40ba-99db-3cb94edec589)
 
+## Check it out!
+
+[Newspaper agency project deployed to Render](https://newspapers-agency-65hd.onrender.com/accounts/login/?next=/)
+
 ## Test User Credentials
 
 - Username: guest
@@ -26,10 +30,6 @@ This project is a web application designed for managing the process of publishin
 
 ## For donwload test data use next comand in terminal:
 python manage.py loaddata fixture_data.json
-
-## Check it out!
-
-[Newspaper agency project deployed to Render](https://newspapers-agency-65hd.onrender.com/accounts/login/?next=/)
 
 # Project wiew: 
 
